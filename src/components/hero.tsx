@@ -27,7 +27,7 @@ export default function HeroSection() {
           tecnología blockchain.
         </p>
         <a
-          href="#quienes-somos"
+          href="/app"
           className="bg-white text-[#1c1c1c] px-6 py-3 rounded-md font-semibold hover:bg-green-600 hover:text-white transition"
         >
           Empezar ahora

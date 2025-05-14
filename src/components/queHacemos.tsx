@@ -15,25 +15,25 @@ export default function QueHacemos() {
       icon: <FaCheckCircle className="text-[#28a745] text-3xl mb-4" />,
       title: "Verificación en origen",
       description:
-        "Verificamos cada actividad agrícola, desde la labranza hasta la cosecha.",
+        "Verificamos cada actividad agrícola, desde la labranza hasta la cosecha, impidiendo posibles fraudes y garantizando la integridad del proceso.",
     },
     {
       icon: <FaDatabase className="text-[#28a745] text-3xl mb-4" />,
       title: "Registro inmutable",
       description:
-        "Cada acción queda almacenada con fecha, ubicación y prueba.",
+        "Almacenamos cada acción con fecha, ubicación y prueba (foto o documento), usando tecnología blockchain para que no pueda ser manipulada.",
     },
     {
       icon: <FaNetworkWired className="text-[#28a745] text-3xl mb-4" />,
       title: "Conexión entre actores",
       description:
-        "Unimos agricultores, cooperativas y brokers en una red segura.",
+        "Unimos agricultores, cooperativas y brokers en una única red trazable, donde cada paso queda registrado y validado.",
     },
     {
       icon: <FaFileAlt className="text-[#28a745] text-3xl mb-4" />,
       title: "Informes fiables",
       description:
-        "Generamos reportes descargables y auditables con toda la trazabilidad.",
+        "Generamos reportes descargables y auditables que reflejan toda la cadena de valor del producto, desde el campo hasta el consumidor.",
     },
   ];
 
@@ -65,7 +65,7 @@ export default function QueHacemos() {
             <Image
               src="/images/mercado.jpg"
               alt="Mercado"
-              width={491}
+              width={600}
               height={350}
               className="rounded-xl shadow-lg object-contain"
             />
@@ -88,12 +88,13 @@ export default function QueHacemos() {
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
                   {card.title}
                 </h3>
-                <p className="text-gray-600">{card.description}</p>
+                <p className="text-gray-600 text-base">{card.description}</p>
               </div>
             ))}
           </motion.div>
         </div>
       </div>
+      {/* <hr className="my-12 border-t border-gray-200" /> */}
     </section>
   );
 }
