@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaEnvelope, FaPhone, FaQuestionCircle } from "react-icons/fa";
+import { FaEnvelope, FaQuestionCircle } from "react-icons/fa";
 
 export default function Contacto() {
   return (
@@ -43,7 +43,7 @@ export default function Contacto() {
             viewport={{ once: true }}
           >
             <FaEnvelope className="text-gray-800 text-3xl mb-4" />
-            <h3 className="text-xl font-bold mb-2">Contacto directo</h3>
+            <h3 className="text-xl font-bold mb-4">Contacto directo</h3>
             <ul className="space-y-2 text-gray-600">
               <li>📍 Valencia, España</li>
               <li>✉️ info@smartfarm.com</li>
