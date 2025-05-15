@@ -1,5 +1,5 @@
 import FormAgricultor from "@/components/appComponents/agricultorPage";
-import WizardSidebar from "@/components/appComponents/wizardSidebarAgr";
+// import WizardSidebar from "@/components/appComponents/wizardSidebarAgr";
 
 export default function AgricultorPage() {
   return (
