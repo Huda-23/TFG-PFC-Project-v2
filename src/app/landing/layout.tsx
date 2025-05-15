@@ -8,12 +8,10 @@ export default function LandingLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body className="font-inter scroll-smooth antialiased">
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <Navbar />
+      {children}
+      <Footer />
+    </>
   );
 }
