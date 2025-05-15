@@ -11,7 +11,7 @@ export default function FormAgricultor() {
       </h1>
 
       {/* Bloque 1: Datos de la parcela */}
-      <section className="mb-8">
+      <section className="mb-8 bg-white p-6 rounded-xl shadow-sm">
         <h2 className="text-lg font-semibold mb-4">Datos de la parcela</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input type="text" placeholder="ID de parcela" className="input" />
@@ -31,6 +31,8 @@ export default function FormAgricultor() {
           </div>
         </div>
       </section>
+
+      <hr className="my-6 border-t-2 border-green-200" />
 
       {/* Bloque 2: Actividades */}
       <section className="mb-8">

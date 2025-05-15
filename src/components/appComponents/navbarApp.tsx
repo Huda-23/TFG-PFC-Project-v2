@@ -15,7 +15,7 @@ export default function NavbarApp() {
   return (
     <header
       id="main-header"
-      className="fixed top-0 w-full z-50 transition-colors duration-500 bg-[rgba(28,28,28,1)] backdrop-blur-md"
+      className="fixed top-0 w-full z-50 transition-colors duration-500 bg-[rgba(28,28,28,1)]"
     >
       <div className="w-full px-4 py-3 flex items-center justify-between">
         {/* Logo y nombre */}

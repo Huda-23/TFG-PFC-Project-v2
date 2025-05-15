@@ -1,4 +1,7 @@
 // src/app/landing/layout.tsx
+import Navbar from "@/components/navbarLanding";
+import Footer from "@/components/footer";
+
 export default function LandingLayout({
   children,
 }: {
@@ -6,10 +9,10 @@ export default function LandingLayout({
 }) {
   return (
     <html lang="es">
-      <body>
-        {/* Aquí puedes meter NavbarLanding si quieres */}
+      <body className="font-inter scroll-smooth antialiased">
+        <Navbar />
         {children}
-        {/* Y también FooterLanding */}
+        <Footer />
       </body>
     </html>
   );
