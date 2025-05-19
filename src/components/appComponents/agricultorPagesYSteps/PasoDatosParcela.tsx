@@ -157,9 +157,9 @@ export default function PasoDatosParcela() {
             defaultValue=""
           >
             <option disabled value="">
-              Selecciona variedad
+              Selecciona variedad cultivada
             </option>
-            <option>Tomate pera</option>
+            <option>Tomate perelló</option>
             <option>Tomate valenciano</option>
             <option>Otro</option>
           </select>
