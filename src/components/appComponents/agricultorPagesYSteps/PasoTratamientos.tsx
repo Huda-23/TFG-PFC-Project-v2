@@ -98,7 +98,7 @@ export default function PasoTratamientos() {
                     </label>
                     <label className="flex flex-col items-center justify-center border-2 border-dashed border-blue-400 rounded-lg px-4 py-4 cursor-pointer hover:bg-blue-50 transition text-sm">
                       <span className="text-blue-600 font-medium">
-                        📎 Selecciona una imagen
+                        Selecciona una imagen
                       </span>
                       <span className="text-gray-500">PNG, JPG... máx 5MB</span>
                       <input
@@ -197,7 +197,7 @@ export default function PasoTratamientos() {
                     </label>
                     <label className="flex flex-col items-center justify-center border-2 border-dashed border-blue-400 rounded-lg px-4 py-4 cursor-pointer hover:bg-blue-50 transition text-sm">
                       <span className="text-blue-600 font-medium">
-                        📎 Selecciona una imagen
+                        Selecciona una imagen
                       </span>
                       <span className="text-gray-500">PNG, JPG... máx 5MB</span>
                       <input

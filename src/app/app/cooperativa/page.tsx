@@ -1,10 +1,9 @@
+import WizardCooperativa from "@/components/appComponents/cooperativaPagesYSteps/wizardCooperativa";
+
 export default function CooperativaPage() {
   return (
-    <main className="p-4">
-      <h1 className="text-2xl font-bold">Página de la Cooperativa</h1>
-      <p className="text-gray-600">
-        Aquí irá el contenido para la Cooperativa.
-      </p>
+    <main className="p-4 bg-gray-50 mt-0 pt-0">
+      <WizardCooperativa />
     </main>
   );
 }
