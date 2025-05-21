@@ -66,7 +66,7 @@ export default function PasoRecogida() {
             name="lugarCarga"
             id="lugarCarga"
             placeholder=" "
-            className="peer w-full md:w-2/3 border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 bg-white focus:border-blue-500 focus:outline-none transition-shadow duration-200 focus:shadow-md focus:shadow-blue-100"
+            className="peer w-full md:w-2/3 border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 bg-white focus:border-blue-500 focus:outline-none transition-shadow duration-200 focus:shadow-md focus:shadow-blue-50"
           />
           <label
             htmlFor="lugarCarga"

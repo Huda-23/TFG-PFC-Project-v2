@@ -9,7 +9,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     <div className="font-inter bg-white antialiased pt-18">
       <NavbarApp />
       <NavbarActores />
-      <div className="pt-[80px] bg-gray-50">{children}</div>
+      <div className="pt-[20px] bg-gray-50">{children}</div>
       <Footer />
     </div>
   );
