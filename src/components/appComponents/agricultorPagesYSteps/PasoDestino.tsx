@@ -36,7 +36,7 @@ export default function PasoDestino() {
 
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-bold text-blue-700 mb-2">
+      <h2 className="text-xl font-bold text-green-700 mb-2">
         Paso 6: Cooperativa de destino
       </h2>
       <p className="text-gray-600 mb-6">
@@ -50,7 +50,7 @@ export default function PasoDestino() {
             name="cooperativa"
             value={cooperativaSeleccionada}
             onChange={handleChange}
-            className="appearance-none w-full border-2 border-gray-300 rounded-lg px-4 py-[0.75rem] text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="appearance-none w-full border-2 border-gray-300 rounded-lg px-4 py-[0.75rem] text-gray-800 focus:border-green-500 focus:outline-none"
           >
             <option value="" disabled>
               Selecciona una cooperativa

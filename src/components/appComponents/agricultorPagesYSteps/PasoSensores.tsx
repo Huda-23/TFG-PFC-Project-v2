@@ -3,7 +3,7 @@
 export default function PasoSensores() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-bold text-blue-700 mb-2">
+      <h2 className="text-xl font-bold text-green-700 mb-2">
         Paso 7: Datos de sensores (opcional)
       </h2>
       <p className="text-gray-600 mb-6">
@@ -24,7 +24,7 @@ export default function PasoSensores() {
             max="14"
             step="0.1"
             placeholder="pH (0 - 14)"
-            className="w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
           />
         </div>
 
@@ -41,7 +41,7 @@ export default function PasoSensores() {
             max="100"
             step="0.1"
             placeholder="Humedad (%)"
-            className="w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
           />
         </div>
 
@@ -56,7 +56,7 @@ export default function PasoSensores() {
             name="temperatura"
             step="0.1"
             placeholder="Temperatura (°C)"
-            className="w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
           />
         </div>
       </form>

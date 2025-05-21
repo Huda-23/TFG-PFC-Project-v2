@@ -15,7 +15,7 @@ export default function PasoControlSanitario() {
 
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-bold text-blue-700 mb-2">
+      <h2 className="text-xl font-bold text-green-700 mb-2">
         Paso 5: Control sanitario
       </h2>
       <p className="text-gray-600 mb-6">
@@ -28,7 +28,7 @@ export default function PasoControlSanitario() {
           <input
             type="date"
             name="fechaControl"
-            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
             placeholder=" "
           />
           <label
@@ -37,10 +37,10 @@ export default function PasoControlSanitario() {
               peer-placeholder-shown:text-base
               peer-focus:top-0
               peer-focus:text-sm
-              peer-focus:text-blue-600
+              peer-focus:text-green-600
               peer-not-placeholder-shown:top-0
               peer-not-placeholder-shown:text-sm
-              peer-not-placeholder-shown:text-blue-600"
+              peer-not-placeholder-shown:text-green-600"
           >
             Fecha de inspección
           </label>
@@ -52,7 +52,7 @@ export default function PasoControlSanitario() {
             type="text"
             name="organismo"
             placeholder=" "
-            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
           />
           <label
             className="absolute left-4 top-3 text-gray-500 text-base transition-all
@@ -60,10 +60,10 @@ export default function PasoControlSanitario() {
               peer-placeholder-shown:text-base
               peer-focus:top-0
               peer-focus:text-sm
-              peer-focus:text-blue-600
+              peer-focus:text-green-600
               peer-not-placeholder-shown:top-0
               peer-not-placeholder-shown:text-sm
-              peer-not-placeholder-shown:text-blue-600"
+              peer-not-placeholder-shown:text-green-600"
           >
             Organismo que inspecciona
           </label>
@@ -75,7 +75,7 @@ export default function PasoControlSanitario() {
             name="resolucion"
             placeholder="Resultado del control, observaciones..."
             rows={4}
-            className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none resize-none"
+            className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none resize-none"
           ></textarea>
         </div>
 
@@ -84,9 +84,9 @@ export default function PasoControlSanitario() {
           <label className="block text-gray-700 font-medium mb-1">
             Documento del control (foto):
           </label>
-          <label className="flex flex-col items-center justify-center border-2 border-dashed border-blue-400 rounded-lg px-4 py-4 cursor-pointer hover:bg-blue-50 transition text-sm">
-            <span className="text-blue-600 font-medium">
-              📎 Selecciona una imagen
+          <label className="flex flex-col items-center justify-center border-2 border-dashed border-green-400 rounded-lg px-4 py-4 cursor-pointer hover:bg-green-50 transition text-sm">
+            <span className="text-green-600 font-medium">
+              Selecciona una imagen
             </span>
             <span className="text-gray-500">PNG, JPG... máx 5MB</span>
             <input

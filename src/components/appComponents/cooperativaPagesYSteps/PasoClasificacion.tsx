@@ -3,7 +3,7 @@
 export default function PasoClasificacion() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-bold text-blue-700 mb-2">
+      <h2 className="text-xl font-bold text-amber-600 mb-2">
         Paso 3: Clasificación del producto
       </h2>
       <p className="text-gray-600 mb-6">
@@ -18,7 +18,7 @@ export default function PasoClasificacion() {
             name="variedadClasificada"
             id="variedadClasificada"
             placeholder=" "
-            className="peer w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 bg-white text-gray-800 focus:border-blue-500 focus:outline-none transition-shadow duration-200 focus:shadow-md focus:shadow-blue-100"
+            className="peer w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 bg-white text-gray-800 focus:border-amber-500 focus:outline-none transition-shadow duration-200 focus:shadow-md focus:shadow-amber-100"
           />
           <label
             htmlFor="variedadClasificada"
@@ -27,10 +27,10 @@ export default function PasoClasificacion() {
               peer-placeholder-shown:text-base
               peer-focus:top-0
               peer-focus:text-sm
-              peer-focus:text-blue-600
+              peer-focus:text-amber-600
               peer-not-placeholder-shown:top-0
               peer-not-placeholder-shown:text-sm
-              peer-not-placeholder-shown:text-blue-600"
+              peer-not-placeholder-shown:text-amber-600"
           >
             Variedad clasificada
           </label>
@@ -43,7 +43,7 @@ export default function PasoClasificacion() {
             name="calibre"
             id="calibre"
             placeholder=" "
-            className="peer w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 bg-white text-gray-800 focus:border-blue-500 focus:outline-none transition-shadow duration-200 focus:shadow-md focus:shadow-blue-100"
+            className="peer w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 bg-white text-gray-800 focus:border-amber-500 focus:outline-none transition-shadow duration-200 focus:shadow-md focus:shadow-amber-100"
           />
           <label
             htmlFor="calibre"
@@ -52,10 +52,10 @@ export default function PasoClasificacion() {
               peer-placeholder-shown:text-base
               peer-focus:top-0
               peer-focus:text-sm
-              peer-focus:text-blue-600
+              peer-focus:text-amber-600
               peer-not-placeholder-shown:top-0
               peer-not-placeholder-shown:text-sm
-              peer-not-placeholder-shown:text-blue-600"
+              peer-not-placeholder-shown:text-amber-600"
           >
             Calibre
           </label>

@@ -8,7 +8,7 @@ export default function PasoLavado() {
 
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-bold text-blue-700 mb-2">
+      <h2 className="text-xl font-bold text-amber-600 mb-2">
         Paso 2: Lavado y acondicionado
       </h2>
       <p className="text-gray-600 mb-6">
@@ -34,7 +34,7 @@ export default function PasoLavado() {
               <span
                 className={`h-6 w-6 rounded-full border-2 flex items-center justify-center transition-all
                   ${
-                    lavado ? "bg-blue-500 border-blue-500" : "border-gray-400"
+                    lavado ? "bg-amber-500 border-amber-500" : "border-gray-400"
                   }`}
               >
                 {lavado && (
@@ -60,22 +60,22 @@ export default function PasoLavado() {
                   <input
                     type="text"
                     placeholder="Producto utilizado"
-                    className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+                    className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-amber-500 focus:outline-none"
                   />
                   <input
                     type="text"
                     placeholder="Disolución (% o proporción)"
-                    className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+                    className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-amber-500 focus:outline-none"
                   />
                   <input
                     type="number"
                     placeholder="Temperatura (°C)"
-                    className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+                    className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-amber-500 focus:outline-none"
                   />
                   <input
                     type="text"
                     placeholder="ID del sensor"
-                    className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+                    className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-amber-500 focus:outline-none"
                   />
                 </div>
               </motion.div>

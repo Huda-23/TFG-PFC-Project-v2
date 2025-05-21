@@ -22,7 +22,7 @@ export default function PasoTratamientos() {
 
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-bold text-blue-700 mb-2">
+      <h2 className="text-xl font-bold text-green-700 mb-2">
         Paso 3: Tratamientos aplicados
       </h2>
       <p className="text-gray-600 mb-6">
@@ -48,7 +48,7 @@ export default function PasoTratamientos() {
               <span
                 className={`h-6 w-6 rounded-full border-2 flex items-center justify-center transition-all ${
                   usarFertilizante
-                    ? "bg-blue-500 border-blue-500"
+                    ? "bg-green-500 border-green-500"
                     : "border-gray-400"
                 }`}
               >
@@ -77,17 +77,17 @@ export default function PasoTratamientos() {
                     <input
                       type="number"
                       placeholder="Cantidad por hectárea (kg/ha)"
-                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
                     />
                     <input
                       type="text"
                       placeholder="Disolución (%, ml/L, etc)"
-                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
                     />
                     <input
                       type="text"
                       placeholder="Marca del fertilizante"
-                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
                     />
                   </div>
 
@@ -96,8 +96,8 @@ export default function PasoTratamientos() {
                     <label className="block text-gray-700 font-medium mb-1">
                       Foto del fertilizante:
                     </label>
-                    <label className="flex flex-col items-center justify-center border-2 border-dashed border-blue-400 rounded-lg px-4 py-4 cursor-pointer hover:bg-blue-50 transition text-sm">
-                      <span className="text-blue-600 font-medium">
+                    <label className="flex flex-col items-center justify-center border-2 border-dashed border-green-400 rounded-lg px-4 py-4 cursor-pointer hover:bg-green-50 transition text-sm">
+                      <span className="text-green-600 font-medium">
                         Selecciona una imagen
                       </span>
                       <span className="text-gray-500">PNG, JPG... máx 5MB</span>
@@ -147,7 +147,7 @@ export default function PasoTratamientos() {
               <span
                 className={`h-6 w-6 rounded-full border-2 flex items-center justify-center transition-all ${
                   usarPesticida
-                    ? "bg-blue-500 border-blue-500"
+                    ? "bg-green-500 border-green-500"
                     : "border-gray-400"
                 }`}
               >
@@ -176,17 +176,17 @@ export default function PasoTratamientos() {
                     <input
                       type="number"
                       placeholder="Cantidad por hectárea (kg/ha)"
-                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
                     />
                     <input
                       type="text"
                       placeholder="Disolución (%, ml/L, etc)"
-                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
                     />
                     <input
                       type="text"
                       placeholder="Marca del pesticida"
-                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+                      className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
                     />
                   </div>
 
@@ -195,8 +195,8 @@ export default function PasoTratamientos() {
                     <label className="block text-gray-700 font-medium mb-1">
                       Foto del pesticida:
                     </label>
-                    <label className="flex flex-col items-center justify-center border-2 border-dashed border-blue-400 rounded-lg px-4 py-4 cursor-pointer hover:bg-blue-50 transition text-sm">
-                      <span className="text-blue-600 font-medium">
+                    <label className="flex flex-col items-center justify-center border-2 border-dashed border-green-400 rounded-lg px-4 py-4 cursor-pointer hover:bg-green-50 transition text-sm">
+                      <span className="text-green-600 font-medium">
                         Selecciona una imagen
                       </span>
                       <span className="text-gray-500">PNG, JPG... máx 5MB</span>

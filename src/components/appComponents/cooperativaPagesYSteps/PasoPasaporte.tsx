@@ -22,7 +22,7 @@ export default function PasoPasaporte() {
 
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-bold text-blue-700 mb-2">
+      <h2 className="text-xl font-bold text-amber-600 mb-2">
         Paso 8: Pasaporte fitosanitario
       </h2>
       <p className="text-gray-600 mb-6">
@@ -40,14 +40,14 @@ export default function PasoPasaporte() {
             value={codigoPasaporte}
             onChange={(e) => setCodigoPasaporte(e.target.value)}
             placeholder=" "
-            className="peer w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 bg-white text-gray-800 focus:border-blue-500 focus:outline-none transition-shadow duration-200 focus:shadow-md focus:shadow-blue-100"
+            className="peer w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 bg-white text-gray-800 focus:border-amber-500 focus:outline-none transition-shadow duration-200 focus:shadow-md focus:shadow-amber-100"
           />
           <label
             htmlFor="codigoPasaporte"
             className="absolute left-4 top-3 text-gray-500 text-base transition-all
               peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
-              peer-focus:top-0 peer-focus:text-sm peer-focus:text-blue-600
-              peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-blue-600"
+              peer-focus:top-0 peer-focus:text-sm peer-focus:text-amber-600
+              peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-amber-600"
           >
             Código del pasaporte (ej: ES-CV-12345-TOM)
           </label>
@@ -60,7 +60,7 @@ export default function PasoPasaporte() {
           </label>
           <div
             onClick={handleUploadClick}
-            className="w-full md:w-1/2 cursor-pointer border-2 border-dashed border-gray-300 rounded-lg p-6 text-center text-gray-500 hover:border-blue-400 hover:bg-blue-50 transition-colors"
+            className="w-full md:w-1/2 cursor-pointer border-2 border-dashed border-amber-300 rounded-lg p-6 text-center text-gray-500 hover:border-amber-400 hover:bg-amber-50 transition-colors"
           >
             {imagenPasaporte ? (
               <Image

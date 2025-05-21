@@ -12,7 +12,7 @@ export default function PasoDatosParcela() {
 
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-bold text-blue-700 mb-2">
+      <h2 className="text-xl font-bold text-green-700 mb-2">
         Paso 1: Información general de la parcela
       </h2>
       <p className="text-gray-600 mb-6">
@@ -26,7 +26,7 @@ export default function PasoDatosParcela() {
             type="text"
             id="nombre"
             name="nombre"
-            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
             placeholder=" "
           />
           <label
@@ -36,10 +36,10 @@ export default function PasoDatosParcela() {
               peer-placeholder-shown:text-base
               peer-focus:top-0
               peer-focus:text-sm
-              peer-focus:text-blue-600
+              peer-focus:text-green-600
               peer-not-placeholder-shown:top-0
               peer-not-placeholder-shown:text-sm
-              peer-not-placeholder-shown:text-blue-600"
+              peer-not-placeholder-shown:text-green-600"
           >
             Nombre del agricultor
           </label>
@@ -53,7 +53,7 @@ export default function PasoDatosParcela() {
             name="ejercicio"
             value={ejercicio}
             readOnly
-            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 bg-gray-100 focus:border-blue-500 focus:outline-none"
+            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 bg-gray-100 focus:border-green-500 focus:outline-none"
             placeholder=" "
           />
           <label
@@ -63,10 +63,10 @@ export default function PasoDatosParcela() {
               peer-placeholder-shown:text-base
               peer-focus:top-0
               peer-focus:text-sm
-              peer-focus:text-blue-600
+              peer-focus:text-green-600
               peer-not-placeholder-shown:top-0
               peer-not-placeholder-shown:text-sm
-              peer-not-placeholder-shown:text-blue-600"
+              peer-not-placeholder-shown:text-green-600"
           >
             Ejercicio (año)
           </label>
@@ -79,7 +79,7 @@ export default function PasoDatosParcela() {
             id="parcela"
             name="parcela"
             required
-            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
             placeholder=" "
           />
           <label
@@ -89,10 +89,10 @@ export default function PasoDatosParcela() {
               peer-placeholder-shown:text-base
               peer-focus:top-0
               peer-focus:text-sm
-              peer-focus:text-blue-600
+              peer-focus:text-green-600
               peer-not-placeholder-shown:top-0
               peer-not-placeholder-shown:text-sm
-              peer-not-placeholder-shown:text-blue-600"
+              peer-not-placeholder-shown:text-green-600"
           >
             ID de parcela
           </label>
@@ -104,7 +104,7 @@ export default function PasoDatosParcela() {
             type="text"
             id="coordenadas"
             name="coordenadas"
-            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
             placeholder=" "
           />
           <label
@@ -114,10 +114,10 @@ export default function PasoDatosParcela() {
               peer-placeholder-shown:text-base
               peer-focus:top-0
               peer-focus:text-sm
-              peer-focus:text-blue-600
+              peer-focus:text-green-600
               peer-not-placeholder-shown:top-0
               peer-not-placeholder-shown:text-sm
-              peer-not-placeholder-shown:text-blue-600"
+              peer-not-placeholder-shown:text-green-600"
           >
             Coordenadas (lat, long)
           </label>
@@ -129,7 +129,7 @@ export default function PasoDatosParcela() {
             type="number"
             id="tamaño"
             name="tamaño"
-            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
             placeholder=" "
           />
           <label
@@ -139,10 +139,10 @@ export default function PasoDatosParcela() {
               peer-placeholder-shown:text-base
               peer-focus:top-0
               peer-focus:text-sm
-              peer-focus:text-blue-600
+              peer-focus:text-green-600
               peer-not-placeholder-shown:top-0
               peer-not-placeholder-shown:text-sm
-              peer-not-placeholder-shown:text-blue-600"
+              peer-not-placeholder-shown:text-green-600"
           >
             Tamaño de la parcela (ha)
           </label>
@@ -153,7 +153,7 @@ export default function PasoDatosParcela() {
           <select
             id="variedad"
             name="variedad"
-            className="appearance-none w-full border-2 border-gray-300 rounded-lg px-4 py-[0.75rem] text-gray-800 focus:border-blue-500 focus:outline-none"
+            className="appearance-none w-full border-2 border-gray-300 rounded-lg px-4 py-[0.75rem] text-gray-800 focus:border-green-500 focus:outline-none"
             defaultValue=""
           >
             <option disabled value="">
@@ -174,7 +174,7 @@ export default function PasoDatosParcela() {
                 type="radio"
                 name="tipo"
                 value="ecologico"
-                className="accent-blue-600"
+                className="accent-green-600"
                 checked={tipoCultivo === "ecologico"}
                 onChange={(e) => setTipoCultivo(e.target.value)}
               />
@@ -185,7 +185,7 @@ export default function PasoDatosParcela() {
                 type="radio"
                 name="tipo"
                 value="convencional"
-                className="accent-blue-600"
+                className="accent-green-600"
                 checked={tipoCultivo === "convencional"}
                 onChange={(e) => setTipoCultivo(e.target.value)}
               />
