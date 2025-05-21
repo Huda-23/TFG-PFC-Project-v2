@@ -21,7 +21,7 @@ export default function PasoTratamientos() {
   };
 
   return (
-    <section className="bg-gray-50 p-6 rounded-lg shadow-md">
+    <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-blue-700 mb-2">
         Paso 3: Tratamientos aplicados
       </h2>

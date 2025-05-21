@@ -11,7 +11,7 @@ export default function PasoDatosParcela() {
   }, []);
 
   return (
-    <section className="bg-gray-50 p-6 rounded-lg shadow-md">
+    <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-blue-700 mb-2">
         Paso 1: Información general de la parcela
       </h2>

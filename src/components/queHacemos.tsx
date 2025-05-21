@@ -40,7 +40,7 @@ export default function QueHacemos() {
   return (
     <section
       id="que-hacemos"
-      className="w-full bg-gray-50 py-5 px-4 sm:px-8 md:px-16"
+      className="w-full bg-gray-50 py-5 px-4 sm:px-8 md:px-16 scroll-mt-18"
     >
       <div className="max-w-6xl mx-auto flex flex-col gap-10">
         <motion.h2

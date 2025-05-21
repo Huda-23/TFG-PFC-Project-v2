@@ -41,9 +41,7 @@ export default function WizardAgricultor() {
       <WizardSidebarAgr currentStep={step} setStep={setStep} />
 
       {/* Contenido del paso actual */}
-      <div className="flex-1 bg-white p-6 rounded-lg shadow">
-        {renderStepContent()}
-      </div>
+      <div className="flex-1">{renderStepContent()}</div>
     </div>
   );
 }

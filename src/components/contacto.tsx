@@ -7,7 +7,7 @@ export default function Contacto() {
   return (
     <section
       id="contacto"
-      className="w-full bg-gray-50 py-20 px-4 sm:px-8 md:px-16"
+      className="w-full bg-gray-50 py-20 px-4 sm:px-8 md:px-16 scroll-mt-5"
     >
       <div className="max-w-6xl mx-auto">
         {/* Título */}
