@@ -13,7 +13,7 @@ export default function ActorNavbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-gray-100 border-b border-gray-300">
+    <nav className="sticky top-[73px] z-40 bg-gray-100 border-b border-gray-300 shadow-sm">
       <ul className="flex gap-10 px-8 pt-5 pb-4 text-xl font-bold">
         {actors.map((actor) => {
           const active = pathname === actor.path;
