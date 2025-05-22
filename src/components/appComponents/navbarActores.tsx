@@ -7,6 +7,7 @@ const actors = [
   { name: "Campo", path: "/app/agricultor" },
   { name: "Cooperativa", path: "/app/cooperativa" },
   { name: "Broker", path: "/app/broker" },
+  { name: "Supermercado", path: "/app/supermercado" },
 ];
 
 export default function ActorNavbar() {

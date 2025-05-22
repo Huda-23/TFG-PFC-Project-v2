@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import BotonLogout from "@/components/appComponents/BotonLogout";
 
 export default function NavbarApp() {
   const pathname = usePathname();
@@ -43,12 +44,8 @@ export default function NavbarApp() {
           </Link>
         </nav>
 
-        {/* Botón login o perfil (ajustable) */}
-        <Link href="/login">
-          <button className="bg-white text-[#1c1c1c] font-medium px-3 py-1.5 text-sm rounded border-2 border-white hover:bg-[#1c1c1c] hover:text-white transition duration-200 cursor-pointer">
-            Cerrar sesión
-          </button>
-        </Link>
+        {/* Botón logout*/}
+        <BotonLogout />
       </div>
     </header>
   );
