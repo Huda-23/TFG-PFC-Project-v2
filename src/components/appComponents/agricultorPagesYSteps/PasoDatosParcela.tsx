@@ -1,39 +1,42 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import BotonMinado from "@/components/appComponents/botonMinado";
 import SelectorHashAnterior from "@/components/appComponents/SelectorHashAnterior";
+import { saveParcelaAction } from "@/actions/agricultorAction";
 
 export default function PasoDatosParcela() {
   const [ejercicio, setEjercicio] = useState("");
   const [tipoCultivo, setTipoCultivo] = useState("");
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [hashAnterior, setHashAnterior] = useState("");
+  const [, action, loading] = useActionState(saveParcelaAction, {
+    success: false,
+  });
 
   useEffect(() => {
     const fecha = new Date();
     setEjercicio(fecha.getFullYear().toString());
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   setLoading(true);
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const datos = Object.fromEntries(formData.entries());
+  //   const form = e.currentTarget;
+  //   const formData = new FormData(form);
+  //   const datos = Object.fromEntries(formData.entries());
 
-    datos.tipoCultivo = tipoCultivo;
-    datos.ejercicio = ejercicio;
-    datos.hash_previo = hashAnterior;
+  //   datos.tipoCultivo = tipoCultivo;
+  //   datos.ejercicio = ejercicio;
+  //   datos.hash_previo = hashAnterior;
 
-    console.log("🚀 Datos a minar:", datos);
+  //   console.log("🚀 Datos a minar:", datos);
 
-    // Aquí irá tu lógica real (API o smart contract)
-    await new Promise((res) => setTimeout(res, 2000)); // Simulación
-    // Entiendo que exsto se cambiará para que esperé la respuesta de la API y pare la animación de loading.
-    setLoading(false);
-  };
+  //   // Aquí irá tu lógica real (API o smart contract)
+  //   // Entiendo que esto se cambiará para que esperé la respuesta de la API y pare la animación de loading.
+  //   setLoading(false);
+  // };
 
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
@@ -49,7 +52,7 @@ export default function PasoDatosParcela() {
         {/* FORMULARIO */}
         <form
           className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6"
-          onSubmit={handleSubmit}
+          action={action}
         >
           {/* Nombre del agricultor */}
           <div className="relative">
@@ -125,13 +128,13 @@ export default function PasoDatosParcela() {
           <div className="relative">
             <input
               type="number"
-              id="tamaño"
-              name="tamaño"
+              id="tamano"
+              name="tamano"
               className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
               placeholder=" "
             />
             <label
-              htmlFor="tamaño"
+              htmlFor="tamano"
               className="absolute left-4 top-3 text-gray-500 text-base transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-green-600 peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-green-600"
             >
               Tamaño de la parcela (ha)

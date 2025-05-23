@@ -12,7 +12,7 @@ export async function GET() {
     });
 
     const [rows] = await connection.execute('SELECT * FROM users');
-    
+
     console.log('Usuarios desde la base de datos:', rows); // Imprime en consola del servidor
 
     await connection.end();

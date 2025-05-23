@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import BotonMinado from "@/components/appComponents/botonMinado";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function PasoActividades() {
@@ -7,6 +8,7 @@ export default function PasoActividades() {
   const [poda, setPoda] = useState(false);
   const [fumigacion, setFumigacion] = useState(false);
   const [personal, setPersonal] = useState(false);
+  const [loading] = useState(false);
 
   const handleCardClick = (e: React.MouseEvent, toggle: () => void) => {
     const tag = (e.target as HTMLElement).tagName;
@@ -196,6 +198,10 @@ export default function PasoActividades() {
               className="w-full md:w-1/2 border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
             />
           </div>
+        </div>
+
+        <div className="col-span-2">
+          <BotonMinado loading={loading} />
         </div>
       </form>
     </section>
