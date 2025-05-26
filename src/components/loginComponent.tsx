@@ -1,36 +1,28 @@
 "use client";
-import { useState } from "react";
+
 import { useRouter } from "next/navigation";
+import { useActionState } from "react";
+import { loginAction } from "@/actions/loginAction";
 import { Eye, EyeOff } from "lucide-react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
+const initialState = { success: false, error: undefined };
+
 export default function LoginPage() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
   const [verPass, setVerPass] = useState(false);
+  const [formState, formAction] = useActionState(loginAction, initialState);
   const router = useRouter();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-
-    const res = await fetch("/api/login", {
-      method: "POST",
-      body: JSON.stringify({ username, password }),
-    });
-
-    if (res.ok) {
+  useEffect(() => {
+    if (formState.success) {
       router.push("/app");
-    } else {
-      setError("Usuario o contraseña incorrectos");
     }
-  };
+  }, [formState.success, router]);
 
   return (
     <main className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
       <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
-        {/* Título + logo en fila */}
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-2xl font-bold text-gray-800">Iniciar sesión</h1>
           <Image
@@ -42,8 +34,7 @@ export default function LoginPage() {
           />
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Campo usuario */}
+        <form action={formAction} className="space-y-5" noValidate>
           <div>
             <label
               htmlFor="username"
@@ -53,18 +44,20 @@ export default function LoginPage() {
             </label>
             <input
               id="username"
+              name="username"
               type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              autoFocus
+              autoComplete="username"
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg 
                 focus:outline-none focus:border-green-600 
                 placeholder:text-gray-500 text-gray-800"
               placeholder="Introduce tu usuario"
               required
+              aria-invalid={!!formState.error}
+              aria-describedby="login-error"
             />
           </div>
 
-          {/* Campo contraseña con botón mostrar */}
           <label
             htmlFor="password"
             className="block text-gray-700 font-bold mb-1"
@@ -74,34 +67,39 @@ export default function LoginPage() {
           <div className="relative">
             <input
               id="password"
+              name="password"
               type={verPass ? "text" : "password"}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="current-password"
               className="w-full px-4 py-3 pr-12 border-2 border-gray-300 rounded-lg 
                 focus:outline-none focus:border-green-600 
                 placeholder:text-gray-500 text-gray-800"
               placeholder="••••••••"
               required
+              aria-invalid={!!formState.error}
+              aria-describedby="login-error"
             />
             <button
               type="button"
               onClick={() => setVerPass(!verPass)}
-              className={`absolute top-1/2 right-3 -translate-y-1/2 transform text-gray-500 hover:text-gray-700`}
-              aria-label="Mostrar contraseña"
+              className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+              aria-label={verPass ? "Ocultar contraseña" : "Mostrar contraseña"}
             >
               {verPass ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
           </div>
 
-          {/* Error */}
-          {error && <p className="text-red-600 text-sm">{error}</p>}
+          {formState.error && (
+            <p id="login-error" className="text-red-600 text-sm text-center">
+              {formState.error}
+            </p>
+          )}
 
-          {/* Botón login */}
           <button
             type="submit"
-            className="w-full py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition cursor-pointer"
+            className="w-full py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition disabled:opacity-50"
+            disabled={formState.success}
           >
-            Entrar
+            {formState.success ? "Entrando..." : "Entrar"}
           </button>
         </form>
       </div>

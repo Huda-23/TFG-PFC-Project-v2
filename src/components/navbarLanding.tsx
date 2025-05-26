@@ -69,7 +69,7 @@ export default function NavbarLanding() {
           </button>
         </nav>
 
-        <Link href="/app">
+        <Link href="/login">
           <button className="bg-white text-[#1c1c1c] font-medium px-3 py-1.5 text-sm rounded border-2 border-white hover:bg-[#1c1c1c] hover:text-white transition duration-200 cursor-pointer">
             Inicia sesión
           </button>

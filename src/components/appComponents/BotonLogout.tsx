@@ -1,12 +1,14 @@
 "use client";
+
 import { useRouter } from "next/navigation";
+import { logoutAction } from "@/actions/logoutAction";
 
 export default function BotonLogout() {
   const router = useRouter();
 
   const handleLogout = async () => {
-    await fetch("/api/logout"); // Abajo de este archivo esta el código de api/logout/route.ts
-    router.push("/landing");
+    await logoutAction(); // Server Action que borra la cookie
+    router.push("/landing"); // Redirige al landing después
   };
 
   return (
@@ -18,18 +20,3 @@ export default function BotonLogout() {
     </button>
   );
 }
-
-/*
-import { cookies } from "next/headers";
-import { NextResponse } from "next/server";
-
-export async function GET(req: Request) {
-  const cookieStore = cookies();
-  cookieStore.set("usuario", "", {
-    path: "/",
-    maxAge: 0,
-  });
-
-  return NextResponse.redirect(new URL("/login", req.url));
-}
-*/
