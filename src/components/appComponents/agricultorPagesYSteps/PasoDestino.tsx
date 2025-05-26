@@ -37,7 +37,7 @@ export default function PasoDestino() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-green-700 mb-2">
-        Paso 6: Cooperativa de destino
+        Paso 7: Cooperativa de destino
       </h2>
       <p className="text-gray-600 mb-6">
         Selecciona la cooperativa a la que se entregará el producto.

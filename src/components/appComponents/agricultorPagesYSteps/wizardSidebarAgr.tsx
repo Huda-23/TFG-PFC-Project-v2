@@ -9,6 +9,7 @@ type WizardSidebarProps = {
 const steps = [
   "Datos parcela",
   "Actividades",
+  "Actividades adicionales",
   "Tratamientos",
   "Cosecha",
   "Control sanitario",

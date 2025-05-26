@@ -5,7 +5,7 @@ export default function PasoCosecha() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-green-700 mb-2">
-        Paso 4: Datos de la cosecha
+        Paso 5: Datos de la cosecha
       </h2>
       <p className="text-gray-600 mb-6">
         Rellena la información relacionada con la recolección de los tomates.

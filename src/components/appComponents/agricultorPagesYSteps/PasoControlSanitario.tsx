@@ -16,7 +16,7 @@ export default function PasoControlSanitario() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-green-700 mb-2">
-        Paso 5: Control sanitario
+        Paso 6: Control sanitario
       </h2>
       <p className="text-gray-600 mb-6">
         Rellena los datos relacionados con las inspecciones realizadas.

@@ -23,7 +23,7 @@ export default function PasoTratamientos() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-green-700 mb-2">
-        Paso 3: Tratamientos aplicados
+        Paso 4: Tratamientos aplicados
       </h2>
       <p className="text-gray-600 mb-6">
         Indica si has utilizado fertilizantes o pesticidas, y rellena los

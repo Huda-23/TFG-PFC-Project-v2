@@ -4,6 +4,7 @@ import WizardSidebarAgr from "./wizardSidebarAgr";
 
 import PasoDatosParcela from "./PasoDatosParcela";
 import PasoActividades from "./PasoActividades";
+import PasoActividadesExtra from "./PasoActividadesExtra";
 import PasoTratamientos from "./PasoTratamientos";
 import PasoCosecha from "./PasoCosecha";
 import PasoControlSanitario from "./PasoControlSanitario";
@@ -21,14 +22,16 @@ export default function WizardAgricultor() {
       case 1:
         return <PasoActividades />;
       case 2:
-        return <PasoTratamientos />;
+        return <PasoActividadesExtra />;
       case 3:
-        return <PasoCosecha />;
+        return <PasoTratamientos />;
       case 4:
-        return <PasoControlSanitario />;
+        return <PasoCosecha />;
       case 5:
-        return <PasoDestino />;
+        return <PasoControlSanitario />;
       case 6:
+        return <PasoDestino />;
+      case 7:
         return <PasoSensores />;
       default:
         return <p>Paso no encontrado</p>;
