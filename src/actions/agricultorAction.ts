@@ -6,12 +6,18 @@ export async function saveParcelaAction(state: { success: boolean }, formData: F
 
     try {
         const datos = Object.fromEntries(formData.entries());
-        console.log("🚀 Datos a minar:", datos);
-        const { nombre, ejercicio, parcela_id, coordenadas, tamano, variedad, tipo_cultivo, hash_final } = datos;
+        // console.log("🚀 Datos a minar:", datos);
+        const { nombre, ejercicio, parcela, coordenadas, tamano, variedad, tipo_cultivo } = datos; // al final falta hash_final (esto es temporal, puede que ni se añada después)
+
+        console.log("Insertando en DB con:", {
+            nombre, ejercicio, parcela, coordenadas, tamano, variedad, tipo_cultivo
+        });
 
         await connection.execute(
-            'INSERT INTO agricultor_registro VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, NULL)',
-            [nombre, ejercicio, parcela_id, coordenadas, tamano, variedad, tipo_cultivo, hash_final]
+            `INSERT INTO agricultor_registro 
+        (nombre, ejercicio, parcela_id, coordenadas, tamano, variedad, tipo_cultivo)
+        VALUES (?, ?, ?, ?, ?, ?, ?)`,
+            [nombre, ejercicio, parcela, coordenadas, tamano, variedad, tipo_cultivo]
         );
 
 

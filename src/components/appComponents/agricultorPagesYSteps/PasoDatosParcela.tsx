@@ -9,7 +9,7 @@ export default function PasoDatosParcela() {
   const [ejercicio, setEjercicio] = useState("");
   const [tipoCultivo, setTipoCultivo] = useState("");
   // const [loading, setLoading] = useState(false);
-  const [hashAnterior, setHashAnterior] = useState("");
+  const [, setHashAnterior] = useState("");
   const [, action, loading] = useActionState(saveParcelaAction, {
     success: false,
   });
@@ -165,7 +165,7 @@ export default function PasoDatosParcela() {
               <label className="flex items-center gap-2 text-gray-700">
                 <input
                   type="radio"
-                  name="tipoCultivo"
+                  name="tipo_cultivo"
                   value="ecologico"
                   className="accent-green-600"
                   checked={tipoCultivo === "ecologico"}
@@ -176,7 +176,7 @@ export default function PasoDatosParcela() {
               <label className="flex items-center gap-2 text-gray-700">
                 <input
                   type="radio"
-                  name="tipoCultivo"
+                  name="tipo_cultivo"
                   value="convencional"
                   className="accent-green-600"
                   checked={tipoCultivo === "convencional"}
