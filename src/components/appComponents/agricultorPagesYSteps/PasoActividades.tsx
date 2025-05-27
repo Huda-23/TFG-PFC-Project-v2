@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useActionState } from "react";
+import { useState, useActionState, useEffect } from "react";
 import BotonMinado from "@/components/appComponents/botonMinado";
 import SelectorHashAnterior from "@/components/appComponents/SelectorHashAnterior";
 import { saveActividadesAction } from "@/actions/agricultorAction";
+
+type Parcela = string;
 
 export default function PasoActividades() {
   const [, action, loading] = useActionState(saveActividadesAction, {
@@ -12,6 +14,21 @@ export default function PasoActividades() {
   const [hashAnterior, setHashAnterior] = useState("");
   const [riego, setRiego] = useState(false);
   const [labrado, setLabrado] = useState(false);
+  const [parcelas, setParcelas] = useState<Parcela[]>([]);
+
+  useEffect(() => {
+    const fetchParcelas = async () => {
+      try {
+        const res = await fetch("/api/agricultor");
+        const data: Parcela[] = await res.json();
+        setParcelas(data);
+      } catch (error) {
+        console.error("Error al cargar parcelas:", error);
+      }
+    };
+
+    fetchParcelas();
+  }, []);
 
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
@@ -30,19 +47,21 @@ export default function PasoActividades() {
 
           {/* ID parcela */}
           <div className="relative">
-            <input
-              type="text"
+            <select
               name="parcela_id"
-              className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:border-green-500 focus:outline-none"
-              placeholder=" "
+              className="peer w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-gray-800 text-gray-500 text-base focus:border-green-500 focus:outline-none bg-white"
               required
-            />
-            <label
-              htmlFor="parcela_id"
-              className="absolute left-4 top-3 text-gray-500 text-base transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-sm peer-focus:text-green-600 peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-green-600"
+              defaultValue=""
             >
-              ID de la parcela
-            </label>
+              <option value="" disabled>
+                Selecciona una parcela
+              </option>
+              {parcelas.map((parcela) => (
+                <option key={parcela} value={parcela}>
+                  {parcela}
+                </option>
+              ))}
+            </select>
           </div>
 
           {/* Producción */}

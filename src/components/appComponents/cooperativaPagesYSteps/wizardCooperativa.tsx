@@ -4,7 +4,7 @@ import { useState } from "react";
 import WizardSidebarCooperativa from "./WizardSidebarCooperativa";
 
 // IMPORTS de todos los pasos
-import PasoRecepcion from "./PasoRecepcion";
+import PasoRecepcion from "./PasoRecepcion2";
 import PasoLavado from "./PasoLavado";
 import PasoClasificacion from "./PasoClasificacion";
 import PasoCalidad from "./PasoCalidad";

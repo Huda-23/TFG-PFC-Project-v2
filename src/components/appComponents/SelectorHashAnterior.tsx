@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 
 type Props = {
@@ -6,7 +7,10 @@ type Props = {
   onSeleccionar: (hash: string) => void;
 };
 
-// Esto es la tabla que aparecerá en las páginas de los pasos, dentro de los formularios. Para poder seleccionar el hash anterior de un actor (O PASO?).
+type HashItem = {
+  hash_datos: string;
+};
+
 export default function SelectorHashAnterior({ actor, onSeleccionar }: Props) {
   const [hashes, setHashes] = useState<string[]>([]);
   const [seleccionado, setSeleccionado] = useState("");
@@ -14,7 +18,7 @@ export default function SelectorHashAnterior({ actor, onSeleccionar }: Props) {
   useEffect(() => {
     fetch(`/api/hashes/${actor}`)
       .then((res) => res.json())
-      .then((data) => setHashes(data.map((d: any) => d.hash_datos)));
+      .then((data: HashItem[]) => setHashes(data.map((d) => d.hash_datos)));
   }, [actor]);
 
   return (

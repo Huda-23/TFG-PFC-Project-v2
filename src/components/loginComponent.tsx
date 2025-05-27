@@ -50,7 +50,7 @@ export default function LoginPage() {
               autoComplete="username"
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg 
                 focus:outline-none focus:border-green-600 
-                placeholder:text-gray-500 text-gray-800"
+                placeholder:text-gray-400 text-gray-800"
               placeholder="Introduce tu usuario"
               required
               aria-invalid={!!formState.error}
@@ -72,7 +72,7 @@ export default function LoginPage() {
               autoComplete="current-password"
               className="w-full px-4 py-3 pr-12 border-2 border-gray-300 rounded-lg 
                 focus:outline-none focus:border-green-600 
-                placeholder:text-gray-500 text-gray-800"
+                placeholder:text-gray-400 text-gray-800"
               placeholder="••••••••"
               required
               aria-invalid={!!formState.error}
@@ -81,7 +81,7 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => setVerPass(!verPass)}
-              className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+              className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-500 hover:text-gray-700 cursor-pointer focus:outline-none"
               aria-label={verPass ? "Ocultar contraseña" : "Mostrar contraseña"}
             >
               {verPass ? <EyeOff size={20} /> : <Eye size={20} />}
@@ -94,9 +94,20 @@ export default function LoginPage() {
             </p>
           )}
 
+          {/* Enlace de registro dentro del form */}
+          <p className="text-center text-sm text-gray-600 mt-2">
+            ¿No tienes cuenta?{" "}
+            <a
+              href="/register"
+              className="text-green-600 font-semibold hover:underline"
+            >
+              Regístrate aquí
+            </a>
+          </p>
+
           <button
             type="submit"
-            className="w-full py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition disabled:opacity-50"
+            className="w-full py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition disabled:opacity-50 cursor-pointer focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
             disabled={formState.success}
           >
             {formState.success ? "Entrando..." : "Entrar"}

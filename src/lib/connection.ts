@@ -1,4 +1,3 @@
-// src/lib/connection.ts
 import mysql from 'mysql2/promise';
 
 const connection = mysql.createPool({

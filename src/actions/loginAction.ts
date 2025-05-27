@@ -1,7 +1,7 @@
 "use server";
 
 import connection from "@/lib/connection";
-import { hashPassword } from "@/actions/hash";
+import { hashPassword } from "@/utils/hash";
 
 type LoginResult = {
     success: boolean;

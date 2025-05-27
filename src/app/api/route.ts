@@ -1,9 +1,9 @@
-// app/api/usuarios/route.ts
 import mysql from 'mysql2/promise';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
+    // Esta conexión esta hecha a pelo, pero hay un archivo de conexión en src/lib/connection.ts
     const connection = await mysql.createConnection({
       host: process.env.DB_HOST || '',
       user: process.env.BB_USER || '',
