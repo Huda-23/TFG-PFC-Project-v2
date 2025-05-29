@@ -47,7 +47,6 @@ export default function PasoDatosParcela() {
         Introduce los datos básicos identificativos del agricultor y su parcela.
       </p>
 
-      {/* Aquí el layout dividido */}
       <div className="flex flex-col md:flex-row gap-8">
         {/* FORMULARIO */}
         <form

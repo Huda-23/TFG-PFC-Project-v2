@@ -1,6 +1,7 @@
 "use server";
 
 import connection from "@/lib/connection";
+import { BLOCKCHAIN_PASSWORD, simularBlockChain } from "@/utils/hash";
 
 // Función para guardar la parcela
 export async function saveParcelaAction(state: { success: boolean }, formData: FormData) {
@@ -42,7 +43,6 @@ export async function saveParcelaAction(state: { success: boolean }, formData: F
 export async function saveActividadesAction(state: { success: boolean }, formData: FormData) {
     try {
         const datos = Object.fromEntries(formData.entries());
-        console.log("💾 Datos recibidos:", datos);
 
         const parcela_id = datos.parcela_id?.toString() || "";
         const produccion = parseInt(datos.produccion as string, 10) || 0;
@@ -50,12 +50,12 @@ export async function saveActividadesAction(state: { success: boolean }, formDat
         // Convertimos checkbox a 1 o 0
         const riego = datos.riego === "1" ? 1 : 0;
         const labrado = datos.labrado === "1" ? 1 : 0;
-
+        const hashFinal = simularBlockChain(parcela_id, String(produccion), BLOCKCHAIN_PASSWORD);
 
         await connection.execute(
-            `INSERT INTO agricultor_actividades (parcela_id, produccion, riego, labrado)
-       VALUES (?, ?, ?, ?)`,
-            [parcela_id, produccion, riego, labrado]
+            `INSERT INTO agricultor_actividades (parcela_id, produccion, riego, labrado, hash_final)
+       VALUES (?, ?, ?, ?, ?)`,
+            [parcela_id, produccion, riego, labrado, hashFinal]
         );
 
         console.log("[DB] insert successful");

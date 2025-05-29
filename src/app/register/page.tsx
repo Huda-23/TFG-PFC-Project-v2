@@ -1,9 +1,9 @@
-import RegisterComponent from "@/components/registerComponent";
+import RegisterPage from "@/components/registerComponent";
 
 export default function CooperativaPage() {
   return (
     <main>
-      <RegisterComponent />
+      <RegisterPage />
     </main>
   );
 }
