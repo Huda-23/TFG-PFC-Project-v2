@@ -4,7 +4,7 @@ export default function PasoCalidad() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-amber-600 mb-2">
-        Paso 4: Control de calidad
+        Paso 5: Control de calidad
       </h2>
       <p className="text-gray-600 mb-6">
         Introduce los datos del control de calidad realizado tras la

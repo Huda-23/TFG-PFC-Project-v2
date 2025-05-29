@@ -4,7 +4,7 @@ export default function PasoAlmacenado() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-amber-600 mb-2">
-        Paso 6: Almacenado
+        Paso 7: Almacenado
       </h2>
       <p className="text-gray-600 mb-6">
         Introduce la información registrada durante el proceso de almacenamiento

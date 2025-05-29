@@ -5,6 +5,7 @@ import WizardSidebarCooperativa from "./WizardSidebarCooperativa";
 
 // IMPORTS de todos los pasos
 import PasoRecepcion from "./PasoRecepcion2";
+import PasoEtiquetado from "./PasoEtiquetado";
 import PasoLavado from "./PasoLavado";
 import PasoClasificacion from "./PasoClasificacion";
 import PasoCalidad from "./PasoCalidad";
@@ -19,6 +20,7 @@ export default function WizardCooperativa() {
 
   const pasos = [
     <PasoRecepcion key="recepcion" />,
+    <PasoEtiquetado key="etiquetado" />,
     <PasoLavado key="lavado" />,
     <PasoClasificacion key="clasificacion" />,
     <PasoCalidad key="calidad" />,

@@ -41,3 +41,49 @@ export const saveUbicacionAction = async (form: FormData) => {
         return { success: false, error };
     }
 };
+
+
+// Obtener los registros que aún no han sido etiquetados
+export const getMercanciaNoEtiquetada = async () => {
+    try {
+        const [rows] = await connection.execute(
+            `SELECT id, hash_mercancia FROM cooperativa WHERE etiquetado = 0`
+        );
+        return rows as { id: number; hash_mercancia: string }[];
+    } catch (error) {
+        console.error("Error al obtener mercancía sin etiquetar:", error);
+        return [];
+    }
+};
+
+// Guardar el etiquetado
+export const saveEtiquetadoAction = async (form: FormData) => {
+    try {
+        const rawId = form.get("id");
+        const rawHash = form.get("hash_mercancia");
+
+        if (typeof rawId !== "string" || typeof rawHash !== "string") {
+            throw new Error("Faltan datos válidos en el formulario.");
+        }
+
+        const id = parseInt(rawId, 10);
+        const hash_mercancia = rawHash;
+
+        if (isNaN(id)) {
+            throw new Error("El ID no es un número válido.");
+        }
+
+        // Hasheo "1" porque el valor de etiquetado es 1, significa que se ha realizado, y saldrá un hash totalmente diferente.
+        const hash_etiquetado = simularBlockChain(hash_mercancia, "1", BLOCKCHAIN_PASSWORD);
+
+        await connection.execute(
+            `UPDATE cooperativa SET etiquetado = 1, hash_etiquetado = ? WHERE id = ?`,
+            [hash_etiquetado, id]
+        );
+
+        return { success: true };
+    } catch (error) {
+        console.error("Error al guardar el etiquetado:", error);
+        return { success: false, error };
+    }
+};

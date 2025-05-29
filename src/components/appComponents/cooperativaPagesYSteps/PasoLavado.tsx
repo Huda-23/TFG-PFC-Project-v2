@@ -9,7 +9,7 @@ export default function PasoLavado() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-amber-600 mb-2">
-        Paso 2: Lavado y acondicionado
+        Paso 3: Lavado y acondicionado
       </h2>
       <p className="text-gray-600 mb-6">
         Indica si se ha realizado el lavado del producto y rellena los datos

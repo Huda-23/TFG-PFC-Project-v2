@@ -8,6 +8,7 @@ type WizardSidebarProps = {
 
 const steps = [
   "Recepción",
+  "Etiquetado",
   "Lavado",
   "Clasificación",
   "Calidad",

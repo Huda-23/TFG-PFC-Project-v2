@@ -4,7 +4,7 @@ export default function PasoEmpaquetado() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-amber-600 mb-2">
-        Paso 5: Empaquetado
+        Paso 6: Empaquetado
       </h2>
       <p className="text-gray-600 mb-6">
         Selecciona el tipo de empaquetado que se ha utilizado según el destino

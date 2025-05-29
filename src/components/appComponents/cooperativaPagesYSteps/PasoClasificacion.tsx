@@ -4,7 +4,7 @@ export default function PasoClasificacion() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-amber-600 mb-2">
-        Paso 3: Clasificación del producto
+        Paso 4: Clasificación del producto
       </h2>
       <p className="text-gray-600 mb-6">
         Rellena los datos de clasificación tras el lavado y acondicionado.

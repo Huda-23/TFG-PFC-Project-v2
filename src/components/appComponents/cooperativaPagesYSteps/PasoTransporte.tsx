@@ -4,7 +4,7 @@ export default function PasoTransporte() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-amber-600 mb-2">
-        Paso 9: Transporte del producto
+        Paso 10: Transporte del producto
       </h2>
       <p className="text-gray-600 mb-6">
         Introduce los datos relacionados con el transporte de la mercancía hasta

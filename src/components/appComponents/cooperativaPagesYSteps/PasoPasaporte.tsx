@@ -23,7 +23,7 @@ export default function PasoPasaporte() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-amber-600 mb-2">
-        Paso 8: Pasaporte fitosanitario
+        Paso 9: Pasaporte fitosanitario
       </h2>
       <p className="text-gray-600 mb-6">
         Introduce el código del pasaporte fitosanitario y sube una imagen del

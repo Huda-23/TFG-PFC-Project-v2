@@ -9,7 +9,7 @@ export default function PasoPedidos() {
   return (
     <section className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl font-bold text-amber-600 mb-2">
-        Paso 7: Elaboración de pedidos
+        Paso 8: Elaboración de pedidos
       </h2>
       <p className="text-gray-600 mb-6">
         Indica el tipo de pedido y, en caso de ser internacional, especifica el
