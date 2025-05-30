@@ -11,7 +11,7 @@ export async function saveParcelaAction(state: { success: boolean }, formData: F
         // console.log(" Datos a minar:", datos);
         const { nombre, ejercicio, parcela, coordenadas, tamano, variedad, tipo_cultivo } = datos; // al final falta hash_final (esto es temporal, puede que ni se añada después)
 
-        // console.log("Insertando en DB con:", {
+        // console.log("Insert en DB:", {
         //     nombre, ejercicio, parcela, coordenadas, tamano, variedad, tipo_cultivo
         // });
 
@@ -23,7 +23,7 @@ export async function saveParcelaAction(state: { success: boolean }, formData: F
         );
 
 
-        // Aquí irá tu lógica real (API o smart contract)
+        // Aquí irá la lógica real (API o smart contract)
         await new Promise((res) => setTimeout(res, 2000)); // Simulación
 
         console.log("[DB] Insert successful");
